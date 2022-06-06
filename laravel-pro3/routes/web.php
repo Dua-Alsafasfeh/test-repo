@@ -18,3 +18,11 @@ Route::get('/', function () {
 });
 Route::get('/blog',[PostController::class, 'viewblog']);
 Route::get('delete-data/id/{id}', [PostController::class, 'destroy']);
+Route::get('/data', [PostController::class, 'fetch']);
+
+Route::get('delete-data/id/{id}', [PostController::class, 'destroy']);
+
+Route::get('edit-data/id/{id}', [PostController::class, 'edit']);
+Route::put('update-data/id/{id}', [PostController::class, 'update']);
+Route::get('add-data', [PostController::class, 'add']);
+Route::post('add-data', [PostController::class, 'create']);
