@@ -2,6 +2,7 @@
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormValidate;
+use App\Http\Controllers\StudentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,3 +21,6 @@ Route::post('form', [FormValidate::class, 'form_validate']);
 Route::view('show','form');
 Route::get('/posts',[FormValidate::class, 'one_relation']);
 Route::get('/comment',[FormValidate::class, 'viewComment']);
+use App\Http\Controllers\CourseController;
+
+Route::get('/academy', [CourseController::class, 'viewCourse']);
